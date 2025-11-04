@@ -1,0 +1,28 @@
+Student Management (Flask + MySQL) - Quick Start
+------------------------------------------------
+
+1) Create MySQL database & table:
+   - Open MySQL and run:
+     CREATE DATABASE student_db;
+     USE student_db;
+     CREATE TABLE students (
+       id INT PRIMARY KEY AUTO_INCREMENT,
+       name VARCHAR(100) NOT NULL,
+       age INT NOT NULL,
+       grade VARCHAR(10) NOT NULL
+     );
+
+2) Update db.py:
+   - Set your MySQL user/password if different from defaults.
+
+3) Install Python deps:
+   pip install -r requirements.txt
+
+4) Run the app:
+   python app.py
+   Open http://127.0.0.1:5000
+
+5) Notes:
+   - Theme is persisted in localStorage.
+   - Uses Feather icons (loaded from CDN).
+   - Frontend uses fetch() to talk to the Flask API endpoints.
